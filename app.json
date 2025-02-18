@@ -7,6 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "plugins": ["@react-native-firebase/app", "@react-native-firebase/auth"],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -18,8 +19,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
+        "googleServicesFile": "./google-services.json",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.SimplePaymentApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
