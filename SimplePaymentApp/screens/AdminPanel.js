@@ -14,7 +14,6 @@ import {
 import { MaterialIcons } from "@expo/vector-icons";
 import { BASE_URL } from "../lib/config";
 
-// const BASE_URL = "http://192.168.0.143:5000";
 
 const AdminPanel = () => {
   const [users, setUsers] = useState([]);
@@ -112,7 +111,7 @@ const AdminPanel = () => {
             activeOpacity={0.7}
             onPress={() => setSelectedUser(user)}
           >
-            <Image source={{ uri: `${BASE_URL}${user.image}` }} style={styles.userImage} />
+            <Image source={{ uri: `data:image/png;base64,${user.image}` }} style={styles.userImage} />
             <View style={styles.userInfo}>
               <Text style={styles.userName}>{user.name || "Unknown"}</Text>
               <Text style={styles.userEmail}>{user.email || "No Email"}</Text>
@@ -129,10 +128,11 @@ const AdminPanel = () => {
         <Modal transparent={true} animationType="slide">
           <View style={styles.modalContainer}>
             <View style={styles.modalContent}>
-              <Image
-                source={{ uri: `${BASE_URL}${selectedUser.image}` }}
-                style={styles.modalImage}
-              />
+            <Image
+  source={{ uri: `data:image/png;base64,${selectedUser.image}` }}
+  style={styles.modalImage}
+/>
+
               <Text style={styles.modalName}>{selectedUser.name}</Text>
               <Text>Email: {selectedUser.email}</Text>
               <Text>Phone: {selectedUser.phone}</Text>

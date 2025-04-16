@@ -21,12 +21,21 @@ app.use(cors({
 }));
 
 // ✅ Connect to MongoDB with Better Error Handling
+// mongoose.connect(process.env.MONGO_URI)
+//   .then(() => console.log("✅ Connected to MongoDB"))
+//   .catch(err => {
+//     console.error("❌ MongoDB Connection Error:", err);
+//     process.exit(1); // Exit the process if DB connection fails
+//   });
+
+
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ Connected to MongoDB"))
+  .then(() => console.log("✅ Connected to MongoDB"))   
   .catch(err => {
     console.error("❌ MongoDB Connection Error:", err);
-    process.exit(1); // Exit the process if DB connection fails
+    process.exit(1);
   });
+
 
 // ✅ Import Routes
 const userRoutes = require("./routes/userRoutes");

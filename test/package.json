@@ -1,0 +1,11 @@
+{
+  "name": "response-tests",
+  "version": "1.0.0",
+  "description": "Response time and performance tests for the application",
+  "scripts": {
+    "test:response": "jest response.test.js"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+} 

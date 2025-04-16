@@ -18,6 +18,7 @@ import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { BASE_URL } from "../lib/config";
 
+//const BASE_URL = "http://192.168.0.143:5000";
 
 const SignUpScreen = ({ navigation }) => {
   const [fullName, setFullName] = useState("");

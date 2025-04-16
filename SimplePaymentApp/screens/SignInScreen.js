@@ -6,6 +6,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons } from "@expo/vector-icons"; 
 import { BASE_URL } from "../lib/config";
 
+//const BASE_URL = "http://192.168.0.143:5000";
+
 import { userRoute } from "@react-navigation/native";
 const SignInScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");

@@ -8,8 +8,6 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "plugins": [
-      "@react-native-firebase/app",
-      "@react-native-firebase/auth",
       "expo-barcode-scanner"
     ],
     "splash": {
@@ -26,10 +24,18 @@
         "googleServicesFile": "./google-services.json",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.SimplePaymentApp"
+      "package": "com.anonymous.SimplePaymentApp",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0977dd29-45b3-4373-9a6a-3e6aef84a03c"
+      }
     }
   }
 }
